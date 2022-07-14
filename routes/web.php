@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ChatController;
-use App\Http\Controllers\GameController;
+use App\Http\Controllers\ApiTokenController;
+use App\Http\Controllers\CodeSnippetController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LogoutController;
@@ -31,22 +33,22 @@ Route::group(['middleware' => 'auth'], function(){
     Route::get('layouts/blank', [HomeController::class, 'layout_blank'])->name('layout-blank');
     Route::get('online-users', [UsersController::class, 'index'])->name('showAll');
     Route::get('chat', [ChatController::class, 'index'])->name('chat');
-    Route::resource('games', GameController::class);
-    // Route::get('games/create', [GameController::class, 'create'])->name('create');
-    // Route::post('games', [GameController::class, 'store'])->name('store');
-
-
-// Route::view('users', 'users.showAll')->name('users.all');
-
-Route::get('/chat', 'App\Http\Controllers\ChatController@showChat')->name('chat.show');
-
-Route::post('/chat/message', 'App\Http\Controllers\ChatController@messageReceived')->name('chat.message');
-
-
+    Route::get('generatetoken', [ApiTokenController::class, 'update'])->name('update');
+    Route::post('products/store', [ProductController::class, 'store'])->name('store');
+    Route::get('product/edit/{product}', [ProductController::class, 'edit'])->name('edit');
+    Route::patch('product/update/{product}', [ProductController::class, 'update'])->name('update');
+    Route::get('products/create', [ProductController::class, 'create'])->name('create');
+    Route::delete('products/destroy/{product}', [ProductController::class, 'destroy'])->name('destroy');
+    Route::get('products', [ProductController::class, 'index'])->name('index');
+    Route::get('product/{product}', [ProductController::class, 'show'])->name('show');
+    Route::resource('codesnippets', CodeSnippetController::class);
+    Route::get('/chat', 'App\Http\Controllers\ChatController@showChat')->name('chat.show');
+    Route::post('/chat/message', 'App\Http\Controllers\ChatController@messageReceived')->name('chat.message');
 });
 
 
 
+Route::view('/game', 'game.show')->name('game.show');
 
 
 // locale Route

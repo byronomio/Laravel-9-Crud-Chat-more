@@ -1,49 +1,40 @@
 {
   "menu": [
     {
-      "url": "home",
+      "url": "/",
       "name": "Home",
       "icon": "home",
-      "slug": "home"
+      "slug": ""
     },
     {
-      "name": "Page Layouts",
-      "icon": "mail",
-      "slug": "",
-      "badge": "5",
-      "badgeClass": "badge badge-pill badge-light-danger ml-auto mr-1",
-      "submenu": [
-        {
-          "url": "layouts/collapsed-menu",
-          "name": "Collapsed Menu",
-          "icon": "circle",
-          "slug": "collapsed-menu"
-        },
-        {
-          "url": "layouts/full",
-          "name": "Layout Full",
-          "icon": "circle",
-          "slug": "layout-full"
-        },
-        {
-          "url": "layouts/without-menu",
-          "name": "Without Menu",
-          "icon": "circle",
-          "slug": "without-menu"
-        },
-        {
-          "url": "layouts/empty",
-          "name": "Layout Empty",
-          "icon": "circle",
-          "slug": "layout-empty"
-        },
-        {
-          "url": "layouts/blank",
-          "name": "Layout Blank",
-          "icon": "circle",
-          "slug": "layout-blank"
-        }
-      ]
+      "url": "products",
+      "name": "Products",
+      "icon": "circle",
+      "slug": "products"
+    },
+    {
+      "url": "game",
+      "name": "Rolette Game",
+      "icon": "circle",
+      "slug": "game"
+    },
+    {
+      "url": "chat",
+      "name": "Chat",
+      "icon": "circle",
+      "slug": "chat"
+    },
+    {
+      "url": "codesnippets",
+      "name": "Code Snippets",
+      "icon": "circle",
+      "slug": "codesnippets"
+    },
+    {
+      "url": "online-users",
+      "name": "Live User Data",
+      "icon": "circle",
+      "slug": "online-users"
     }
   ]
 }

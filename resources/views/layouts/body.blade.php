@@ -50,7 +50,6 @@
     @include('panels/scripts')
     
 
-
     <div></div>
     <script type="text/javascript">
         $(window).on('load', function() {
@@ -65,6 +64,6 @@
 
 </body>
 
-<script src="{{ asset('js/broadcastusernotification.js') }}"></script>
+{{-- <script src="{{ asset('js/broadcastusernotification.js') }}"></script> --}}
 @stack('scripts')
 </html>

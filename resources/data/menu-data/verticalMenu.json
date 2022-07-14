@@ -7,15 +7,33 @@
       "slug": ""
     },
     {
+      "url": "products",
+      "name": "Products",
+      "icon": "shopping-cart",
+      "slug": "products"
+    },
+    {
+      "url": "game",
+      "name": "Rolette Game",
+      "icon": "refresh-ccw",
+      "slug": "game"
+    },
+    {
       "url": "chat",
       "name": "Chat",
-      "icon": "circle",
+      "icon": "message-circle",
       "slug": "chat"
     },
     {
+      "url": "codesnippets",
+      "name": "Code Snippets",
+      "icon": "pen-tool",
+      "slug": "codesnippets"
+    },
+    {
       "url": "online-users",
-      "name": "Online Users",
-      "icon": "circle",
+      "name": "Live User Data",
+      "icon": "users",
       "slug": "online-users"
     }
   ]

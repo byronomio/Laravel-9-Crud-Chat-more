@@ -2,7 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\Api\UserController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -14,8 +14,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::middleware('auth:api')->get('users', [UserController::class, 'index'])->name('index');
+Route::middleware('auth:api')->get('users/{user}', [UserController::class, 'show'])->name('show');
+Route::middleware('auth:api')->patch('users/{user}', [UserController::class, 'update'])->name('update');
+
+
+
+
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::apiResource('users', 'App\Http\Controllers\Api\UserController');
+// Route::apiResource('users', 'App\Http\Controllers\Api\UserController');
+
+// Route::middleware('auth:api')->get('/users', function(Request $request) {
+//     return $request->user();
+// });

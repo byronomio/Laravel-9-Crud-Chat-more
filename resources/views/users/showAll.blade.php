@@ -3,7 +3,7 @@
 @section('content')
     <div class="w-100">
         <div class="card p-0">
-            <div class="card-header">Users</div>
+         
             <div class="card-body">
                 <ul id="users">
                 </ul>
@@ -13,7 +13,8 @@
     @push('scripts')
         <script>
             // const axios = require('axios');
-            window.axios.get('/api/users')
+            window.axios.get('/api/users?api_token=eZFxukZVdIC6CqoQMoGUX42viQ6IBkl9zRtXYAV7uJSpbOuoUJiqEuV2JIst')
+            
                 .then((response) => {
                     const usersElement = document.getElementById('users');
                     let users = response.data;

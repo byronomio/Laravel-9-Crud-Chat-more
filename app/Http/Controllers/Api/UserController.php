@@ -15,11 +15,8 @@ class UserController extends Controller
      */
     public function index()
     {
-
-        
         return User::all();
     }
-
 
     /**
      * Store a newly created resource in storage.
@@ -38,7 +35,7 @@ class UserController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
     public function show(User $user)
@@ -46,33 +43,34 @@ class UserController extends Controller
         return $user;
     }
 
-
     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\User  $user
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, User $user)
     {
         $data = $request->all();
-        $data['password'] = bcrypt($request->password);
+        // $data['password'] = bcrypt($request->password);
 
         $user->fill($data);
         $user->save();
+
         return $user;
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\User  $user
+     * @param  \App\User  $user
      * @return \Illuminate\Http\Response
      */
     public function destroy(User $user)
     {
         $user->delete();
+
         return $user;
     }
 }

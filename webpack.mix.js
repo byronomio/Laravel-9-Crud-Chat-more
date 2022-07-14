@@ -49,9 +49,6 @@ mixAssetsDir('sass/base/core/**/!(_)*.scss', (src, dest) =>
   mix.sass(src, dest.replace(/(\\|\/)sass(\\|\/)/, '$1css$2').replace(/\.scss$/, '.css'), { sassOptions })
 )
 
-mix
-  // .js('resources/js/custom/bootstrap.js', 'public/js/core')
-  .js('resources/js/app.js', 'public/custom')
 // script js
 mixAssetsDir('js/scripts/**/*.js', (src, dest) => mix.scripts(src, dest))
 
@@ -71,9 +68,10 @@ mix.copyDirectory('resources/images', 'public/images')
 mix.copyDirectory('resources/data', 'public/data')
 
 mix
+  
   .js('resources/js/core/app-menu.js', 'public/js/core')
   .js('resources/js/core/app.js', 'public/js/core')
-  
+  .js('resources/js/app.js', 'public/js/core')
   .sass('resources/sass/core.scss', 'public/css', { sassOptions })
   .sass('resources/sass/overrides.scss', 'public/css', { sassOptions })
   .sass('resources/sass/base/custom-rtl.scss', 'public/css-rtl', { sassOptions })
