@@ -1,0 +1,22 @@
+{
+  "menu": [
+    {
+      "url": "/",
+      "name": "Home",
+      "icon": "home",
+      "slug": ""
+    },
+    {
+      "url": "chat",
+      "name": "Chat",
+      "icon": "circle",
+      "slug": "chat"
+    },
+    {
+      "url": "online-users",
+      "name": "Online Users",
+      "icon": "circle",
+      "slug": "online-users"
+    }
+  ]
+}
